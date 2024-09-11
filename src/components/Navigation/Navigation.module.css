@@ -1,0 +1,10 @@
+.nav{
+
+    @apply flex gap-3
+}
+.link{
+    @apply block p-4 transition-colors
+}
+.active {
+    @apply text-red-500
+}

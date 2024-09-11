@@ -1,0 +1,6 @@
+.appBar {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px #000;
+    @apply bg-white z-10
+}

@@ -3,8 +3,14 @@
     @apply flex justify-center items-center h-[calc(100vh-59px)]
 }
 .hero {
-    @apply bg-white/20 backdrop-blur-xl rounded-lg p-6 w-fit
+    @apply bg-white/20 backdrop-blur-xl rounded-lg p-6 w-fit flex gap-6 flex-col
 }
 .h1{
     @apply text-white text-3xl
+}
+.menu {
+    @apply flex items-center gap-3 justify-center
+}
+.link {
+    @apply text-white bg-gradient-to-r from-sky-400 to-purple-500 rounded-full px-4 py-2 text-base/none
 }

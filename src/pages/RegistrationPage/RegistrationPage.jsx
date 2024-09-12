@@ -7,7 +7,10 @@ import {selectAuthError, selectAuthIsLoggedIn} from "../../redux/auth/selectors"
 
 const ValidationSchema = Yup.object().shape({
     name: Yup.string().min(2, "Too Short!").max(50, "Too Long!").required("Required"),
-    email: Yup.string().email().required("Required"),
+    email: Yup.string()
+        .email()
+        .matches(/^(?!.*@[^,]*,)/)
+        .required("Required"),
     password: Yup.string().min(7, "Too Short!").max(50, "Too Long!").required("Required"),
 });
 

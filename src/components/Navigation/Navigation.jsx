@@ -4,6 +4,7 @@ import {selectAuthIsLoggedIn, selectAuthUser} from "../../redux/auth/selectors";
 import AuthNav from "../AuthNav/AuthNav";
 import UserMenu from "../UserMenu/UserMenu";
 import {FaUserAlt} from "react-icons/fa";
+import {RiContactsBook3Line} from "react-icons/ri";
 
 const Navigation = () => {
     const isLoggedIn = useSelector(selectAuthIsLoggedIn);
@@ -12,6 +13,10 @@ const Navigation = () => {
 
     return (
         <nav className={css.navigation}>
+            <div className={css.logo}>
+                <RiContactsBook3Line />
+                <span>Contacts</span>
+            </div>
             {isLoggedIn ? <UserMenu /> : <AuthNav />}{" "}
             <div className={css.user}>
                 <div className={css.avatar}>

@@ -5,22 +5,11 @@
 
 ## Project setup
 
-npm i axios
-npm i formik
-npm i yup
-npm i clsx
+npm i axios formik yup clsx
 
-npm i react-routes
-npm i react-router-dom
-npm i react-redux
-npm i @reduxjs/toolkit
-npm i redux-persist
+npm i react-routes react-router-dom react-redux redux-persist @reduxjs/toolkit
 
-npm i react-icons
-npm i react-loader-spinner
-npm i react-hot-toast
+npm i react-icons react-loader-spinner react-hot-toast
 
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss postcss autoprefixer @tailwindcss/forms
 npx tailwindcss init -p
-
-npm install -D @tailwindcss/forms

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import css from "./UserMenu.module.css";
+import css from "../Navigation/Navigation.module.css";
 import {NavLink} from "react-router-dom";
 import {userLogout} from "../../redux/auth/operations";
 import {useDispatch} from "react-redux";
@@ -10,7 +10,7 @@ const UserMenu = () => {
         dispatch(userLogout());
     };
     return (
-        <nav className={css.usermenu}>
+        <ul className={css.menu}>
             <li>
                 <NavLink to="/" className={({isActive}) => clsx(css.link, isActive && css.active)}>
                     Home
@@ -22,11 +22,11 @@ const UserMenu = () => {
                 </NavLink>
             </li>
             <li>
-                <button type="button" onClick={handleLogout}>
+                <button type="button" class={css.link} onClick={handleLogout}>
                     Logout
                 </button>
             </li>
-        </nav>
+        </ul>
     );
 };
 export default UserMenu;

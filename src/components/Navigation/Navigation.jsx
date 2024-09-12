@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 import {selectAuthIsLoggedIn, selectAuthUser} from "../../redux/auth/selectors";
 import AuthNav from "../AuthNav/AuthNav";
 import UserMenu from "../UserMenu/UserMenu";
+import {FaUserAlt} from "react-icons/fa";
 
 const Navigation = () => {
     const isLoggedIn = useSelector(selectAuthIsLoggedIn);
@@ -11,7 +12,13 @@ const Navigation = () => {
 
     return (
         <nav className={css.navigation}>
-            {isLoggedIn ? <UserMenu /> : <AuthNav />} Hello: {user.name ?? "Guest"}
+            {isLoggedIn ? <UserMenu /> : <AuthNav />}{" "}
+            <div className={css.user}>
+                <div className={css.avatar}>
+                    <FaUserAlt />
+                </div>
+                Hello: {user.name ?? "Guest"}
+            </div>
         </nav>
     );
 };

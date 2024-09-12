@@ -1,10 +1,10 @@
 import {NavLink} from "react-router-dom";
-import css from "./AuthNav.module.css";
+import css from "../Navigation/Navigation.module.css";
 import clsx from "clsx";
 
 const AuthNav = () => {
     return (
-        <ul className={css.authnav}>
+        <ul className={css.menu}>
             <li>
                 <NavLink to="/" className={({isActive}) => clsx(css.link, isActive && css.active)}>
                     Home

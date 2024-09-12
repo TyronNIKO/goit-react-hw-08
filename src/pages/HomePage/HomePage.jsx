@@ -1,12 +1,34 @@
+import {useSelector} from "react-redux";
+import Section from "../../components/Section";
+import {selectAuthIsLoggedIn, selectAuthUser} from "../../redux/auth/selectors";
+import css from "./HomePage.module.css";
+import {NavLink} from "react-router-dom";
+import clsx from "clsx";
 
-        import css from './HomePage.module.css';
-
-        const HomePage = () => {
-        return (
+const HomePage = () => {
+    const isLoggedIn = useSelector(selectAuthIsLoggedIn);
+    const user = useSelector(selectAuthUser);
+    return (
+        <Section name={css.section} container>
             <div className={css.homepage}>
-            {/* Your component code here */}
+                <div className={css.hero}>
+                    <h1 className={css.h1}>Welcome {user.name ?? "Guest"} to your contact book</h1>
+                    {!isLoggedIn && "Log In or Sign Up"}
+                    <ul className={css.menu}>
+                        <li>
+                            <NavLink to="/register" className={({isActive}) => clsx(css.link, isActive && css.active)}>
+                                Register
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/login" className={({isActive}) => clsx(css.link, isActive && css.active)}>
+                                Login
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            );
-        };
-        export default HomePage;
-        
+        </Section>
+    );
+};
+export default HomePage;

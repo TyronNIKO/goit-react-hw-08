@@ -24,6 +24,7 @@ const ContactsPage = () => {
                 toast.success("Contacts loaded successfully");
             });
     }, [dispatch]);
+
     return (
         <div className={css.contactspage}>
             <Section name="header-section" container>

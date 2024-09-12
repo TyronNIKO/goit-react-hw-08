@@ -12,6 +12,7 @@ import {selectAuthIsRefreshing} from "../redux/auth/selectors";
 import RestrictedRoute from "./RestrictedRoute";
 import PrivateRoute from "./PrivateRoute";
 import Layout from "./Layout";
+import LavaLamp from "./LavaLamp/LavaLamp";
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() => import("../pages/RegistrationPage/RegistrationPage"));
@@ -28,13 +29,14 @@ const App = () => {
         <Loader />
     ) : (
         <Layout>
+            <LavaLamp />
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/register" element={<RestrictedRoute component={<RegistrationPage />} />} />
                 <Route path="/login" element={<RestrictedRoute component={<LoginPage />} />} />
                 <Route path="/contacts" element={<PrivateRoute component={<ContactsPage />} />} />
             </Routes>
-            <Toaster />
+            <Toaster position="top-right" />
         </Layout>
     );
 };

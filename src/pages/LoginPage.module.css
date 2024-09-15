@@ -5,7 +5,7 @@
     @apply text-white text-base
 }
 .glass-box {
-    @apply bg-white/20 backdrop-blur-xl rounded-lg p-6 w-full flex gap-6 flex-col
+    @apply bg-white/20 backdrop-blur-xl rounded-lg p-6 w-full flex gap-6 flex-col md:w-1/2
 }
 .form {
     @apply flex flex-col gap-4

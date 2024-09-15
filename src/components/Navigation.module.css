@@ -26,5 +26,5 @@ button {
     @apply w-10 h-10 rounded-full bg-gradient-to-r from-sky-400 to-purple-500 items-center justify-center flex
 }
 .desctop-menu {
-    @apply hidden gap-4 ml-auto
+    @apply hidden gap-4 ml-auto md:flex
 }

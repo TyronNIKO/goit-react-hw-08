@@ -22,35 +22,37 @@ const LoginPage = () => {
         setShowPassword(prevState => !prevState);
     };
     return (
-        <Section name={css.login_page} container>
-            <div className={css["glass-box"]}>
-                <h2 className={css.title}>Login</h2>
-                <Formik
-                    initialValues={{
-                        email: "",
-                        password: "",
-                    }}
-                    onSubmit={(values, {resetForm}) => {
-                        console.log(values);
-                        dispatch(userLogin(values));
-                        resetForm();
-                    }}
-                    validationSchema={ValidationSchema}
-                >
-                    <Form className={css.form}>
-                        <div className={css.field_group}>
-                            <Field type="text" name="email" id="email" />
-                        </div>
-                        <ErrorMessage name="email" component="span" className={css["error-message"]} />
-                        <div className={css.field_group}>
-                            <Field type="password" name="password" id="password" />
-                            <IoEye onClick={togglePasswordVisibility} className={css.toggle_pass} />
-                        </div>
-                        <ErrorMessage name="password" component="span" className={css["error-message"]} />
-                        <button type="submit">Submit</button>
-                        {error && <p className={css["error-message"]}>{error}</p>}
-                    </Form>
-                </Formik>
+        <Section name={css.section} container>
+            <div className={css.login_page}>
+                <div className={css["glass-box"]}>
+                    <h2 className={css.title}>Login</h2>
+                    <Formik
+                        initialValues={{
+                            email: "",
+                            password: "",
+                        }}
+                        onSubmit={(values, {resetForm}) => {
+                            console.log(values);
+                            dispatch(userLogin(values));
+                            resetForm();
+                        }}
+                        validationSchema={ValidationSchema}
+                    >
+                        <Form className={css.form}>
+                            <div className={css.field_group}>
+                                <Field type="text" name="email" id="email" placeholder="Your email" />
+                            </div>
+                            <ErrorMessage name="email" component="span" className={css["error-message"]} />
+                            <div className={css.field_group}>
+                                <Field type={showPassword ? "text" : "password"} name="password" id="password" placeholder="Your password" />
+                                <IoEye onClick={togglePasswordVisibility} className={css.toggle_pass} />
+                            </div>
+                            <ErrorMessage name="password" component="span" className={css["error-message"]} />
+                            <button type="submit">Submit</button>
+                            {error && <p className={css["error-message"]}>{error}</p>}
+                        </Form>
+                    </Formik>
+                </div>
             </div>
         </Section>
     );

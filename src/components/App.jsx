@@ -36,7 +36,7 @@ const App = () => {
                 <Route path="/login" element={<RestrictedRoute component={<LoginPage />} />} />
                 <Route path="/contacts" element={<PrivateRoute component={<ContactsPage />} />} />
             </Routes>
-            <Toaster position="top-right" />
+            <Toaster position="top-center" />
         </Layout>
     );
 };

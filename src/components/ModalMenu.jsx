@@ -37,7 +37,7 @@ const ModalMenu = () => {
         <>
             <IoReorderThree className={css["mobile-menu-toggle"]} title="Open mobile menu" onClick={openModal} />
 
-            <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} bodyOpenClassName={css["ReactModal__Body--open"]} overlayClassName={cssOverlay} className={"cssContent"} contentLabel="MobileMenu Modal">
+            <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} bodyOpenClassName={css["ReactModal__Body--open"]} overlayClassName={cssOverlay} className={cssContent} contentLabel="MobileMenu Modal">
                 <div className={css["mobile-menu"]} onClick={closeModal}>
                     {isLoggedIn ? <UserMenu /> : <AuthNav />}{" "}
                     <div className={css.user} title="Profile">

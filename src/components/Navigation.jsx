@@ -3,17 +3,19 @@ import {useSelector} from "react-redux";
 import {selectAuthIsLoggedIn, selectAuthUser} from "../redux/auth/selectors";
 import AuthNav from "./AuthNav";
 import UserMenu from "./UserMenu";
-import {IoPerson, IoReorderThree} from "react-icons/io5";
-
+import {IoPerson} from "react-icons/io5";
 import {RiContactsBook3Line} from "react-icons/ri";
 import {NavLink} from "react-router-dom";
-import {useEffect, useState} from "react";
 import ModalMenu from "./ModalMenu";
+import toast from "react-hot-toast";
 
 const Navigation = () => {
     const isLoggedIn = useSelector(selectAuthIsLoggedIn);
     const user = useSelector(selectAuthUser);
 
+    const openProfile = () => {
+        toast.error("Тут нічого ще нема ;)");
+    };
     return (
         <nav className={css.navigation} id="main-nav">
             <div className={css.logo}>
@@ -25,7 +27,7 @@ const Navigation = () => {
 
             <div className={css["desctop-menu"]}>
                 {isLoggedIn ? <UserMenu /> : <AuthNav />}{" "}
-                <div className={css.user} title="Profile">
+                <div className={css.user} title="Profile" onClick={openProfile}>
                     <div className={css.avatar}>
                         <IoPerson />
                     </div>

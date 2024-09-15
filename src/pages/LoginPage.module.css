@@ -1,5 +1,5 @@
 .login_page {
-    @apply flex justify-center items-center h-[calc(100vh-56px)]
+    @apply flex justify-center items-center h-[calc(100vh-60px)]
 }
 .login_page h2 {
     @apply text-white text-base

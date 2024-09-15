@@ -1,0 +1,22 @@
+.contacts-form {
+    @apply flex p-4 flex-col gap-3;
+}
+.contacts-form h2 {
+    @apply text-white text-base
+}
+.contacts-form .form {
+    @apply flex flex-col w-full justify-center items-center;
+}
+.contacts-form .form-group {
+    @apply flex flex-col w-full mb-[15px];
+}
+
+.contacts-form input {
+    @apply relative w-full rounded-full leading-4 block border-0 px-5 py-3 text-white placeholder:text-white/50 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-base sm:leading-6 bg-transparent ring-1 ring-white/50
+}
+.contacts-form .btn {
+    @apply w-fit px-5 py-3 border-0 text-white bg-gradient-to-r from-sky-400 to-purple-500  rounded-full text-base/none
+}
+.error-message {
+    @apply text-xs text-red-500
+}

@@ -5,18 +5,18 @@ const LavaLamp = () => {
     return (
         <div className={css.lavalamp}>
             {/* <div className={css.bulb}></div> */}
-            <div class={css.lamp}>
-                <div class={css.lava}>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={css.blob}></div>
-                    <div class={clsx(css.blob, css.top)}></div>
-                    <div class={clsx(css.blob, css.bottom)}></div>
+            <div className={css.lamp}>
+                <div className={css.lava}>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={css.blob}></div>
+                    <div className={clsx(css.blob, css.top)}></div>
+                    <div className={clsx(css.blob, css.bottom)}></div>
                 </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1">

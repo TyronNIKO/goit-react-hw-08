@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
-import Section from "../../components/Section";
-import {selectAuthIsLoggedIn, selectAuthUser} from "../../redux/auth/selectors";
+import Section from "../components/Section";
+import {selectAuthIsLoggedIn, selectAuthUser} from "../redux/auth/selectors";
 import css from "./HomePage.module.css";
 import {NavLink} from "react-router-dom";
 import clsx from "clsx";
@@ -13,7 +13,7 @@ const HomePage = () => {
             <div className={css.homepage}>
                 <div className={css.hero}>
                     <h1 className={css.h1}>
-                        Welcome {user.name ?? "Guest"} to {user.name && "your"} contacts book app
+                        Welcome {user.name ?? "Guest"} to {user.name && "your"} contacts app
                     </h1>
                     {!isLoggedIn && (
                         <ul className={css.menu}>

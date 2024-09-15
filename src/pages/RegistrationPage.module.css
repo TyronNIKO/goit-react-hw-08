@@ -1,0 +1,27 @@
+.registration_page {
+    @apply flex justify-center items-center h-[calc(100vh-56px)]
+}
+.registration_page h2 {
+    @apply text-white text-base
+}
+.glass-box {
+    @apply bg-white/20 backdrop-blur-xl rounded-lg p-6 w-full flex gap-6 flex-col
+}
+.form {
+    @apply flex flex-col gap-3
+}
+.form input {
+    @apply relative w-full rounded-full leading-4 block border-0 px-5 py-3 text-white placeholder:text-white/50 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-base sm:leading-6 bg-transparent ring-1 ring-white/50 text-base/none
+}
+.form button {
+    @apply w-full px-5 py-3 border-0 text-white bg-gradient-to-r from-sky-400 to-purple-500 rounded-full text-base/none
+}
+.field_group {
+    @apply relative
+}
+.toggle_pass {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-white mix-blend-difference
+}
+.error-message {
+    @apply text-sm text-red-500 drop-shadow-md
+}

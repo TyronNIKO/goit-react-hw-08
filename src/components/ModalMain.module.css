@@ -1,0 +1,45 @@
+.ReactModal__Body--open {
+    @apply overflow-hidden
+}
+.ReactModal__Overlay {
+    @apply fixed top-0 right-0 bottom-0 left-0 z-50 bg-black/50  opacity-0 transition delay-500 ease-in-out
+}
+
+.ReactModal__Overlay--after-open {
+    @apply !opacity-100
+}
+
+.ReactModal__Overlay--before-close {
+    @apply !opacity-0
+}
+.ReactModal__Content {
+    @apply absolute top-1/2 right-auto bottom-auto left-1/2 p-0 -translate-x-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-xl w-full sm:w-fit max-w-[calc(100vw-36px)]
+}
+.ReactModal__Content img {
+    @apply max-h-dvh
+}
+
+.modal-btn {
+    @apply absolute bottom-10 left-2/4 -translate-x-1/2 p-2 border-0 text-white flex justify-center items-center w-10 h-10 transition-[width] duration-200
+}
+.modal-btn:hover {
+    @apply w-32
+}
+.modal-btn span {
+    @apply transition duration-200 scale-x-0 absolute whitespace-nowrap
+}
+.modal-btn:hover span {
+    @apply scale-x-100
+}
+.modal-btn svg {
+    @apply w-8 h-8 absolute transition duration-200 opacity-100
+}
+.modal-btn:hover svg {
+    @apply opacity-0
+}
+.pseudo-btn {
+    @apply bg-gradient-to-r from-sky-400 to-purple-500 rounded-full text-base/none flex gap-1 items-center transition duration-200 w-full h-full absolute
+}
+.close {
+    @apply text-3xl absolute right-1 top-1  rounded-xl text-white
+}

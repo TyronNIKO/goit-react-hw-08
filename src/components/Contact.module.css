@@ -1,0 +1,21 @@
+.card {
+    @apply flex items-center p-2 rounded-lg bg-white/20 backdrop-blur-xl gap-4 shadow-md
+}
+.info {
+    @apply flex flex-col gap-1 mr-auto text-white
+}
+.name {
+    @apply text-xl font-bold
+}
+.phone {
+    @apply text-xs
+}
+.btns {
+    @apply flex gap-2 text-white text-lg sm:text-2xl cursor-pointer items-center
+}
+.btns .delete {
+    @apply bg-transparent w-fit text-xl sm:text-3xl
+}
+.avatar {
+    @apply w-10 h-10 rounded-full bg-gradient-to-r from-sky-400 to-purple-500 items-center justify-center flex text-white
+}

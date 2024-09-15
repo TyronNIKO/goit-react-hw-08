@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import css from "../Navigation/Navigation.module.css";
+import css from "./Navigation.module.css";
 import {NavLink} from "react-router-dom";
-import {userLogout} from "../../redux/auth/operations";
+import {userLogout} from "../redux/auth/operations";
 import {useDispatch} from "react-redux";
 
 const UserMenu = () => {
@@ -12,18 +12,13 @@ const UserMenu = () => {
     return (
         <ul className={css.menu}>
             <li>
-                <NavLink to="/" className={({isActive}) => clsx(css.link, isActive && css.active)}>
-                    Home
-                </NavLink>
-            </li>
-            <li>
                 <NavLink to="/contacts" className={({isActive}) => clsx(css.link, isActive && css.active)}>
-                    Contacts
+                    <span title="Contacts page">Contacts</span>
                 </NavLink>
             </li>
             <li>
-                <button type="button" class={css.link} onClick={handleLogout}>
-                    Logout
+                <button type="button" className={css.link} onClick={handleLogout}>
+                    <span title="Logout">Logout</span>
                 </button>
             </li>
         </ul>

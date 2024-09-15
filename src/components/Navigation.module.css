@@ -1,0 +1,30 @@
+.navigation{
+    @apply flex items-center gap-3
+}
+.logo {
+    @apply uppercase text-white text-base
+}
+.logo a {
+    @apply flex items-center gap-1
+}
+.menu{
+    @apply flex items-center gap-4
+}
+.link{
+    @apply block py-4 transition-colors text-white hover:text-sky-400
+}
+.active {
+    @apply text-sky-400
+}
+button {
+    @apply block p-4 transition-colors text-white
+}
+.user {
+    @apply  transition-colors text-white flex items-center gap-2 justify-self-end cursor-pointer
+}
+.avatar {
+    @apply w-10 h-10 rounded-full bg-gradient-to-r from-sky-400 to-purple-500 items-center justify-center flex
+}
+.desctop-menu {
+    @apply hidden gap-4 ml-auto
+}

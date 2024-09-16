@@ -13,7 +13,7 @@
     @apply !opacity-0
 }
 .react_modal__content {
-    @apply absolute w-3/4 h-dvh top-0 left-auto right-0 bottom-auto p-4  bg-white/20 backdrop-blur-sm rounded-xl   transition-all translate-x-full
+    @apply absolute w-3/4 h-dvh top-0 left-auto right-0 bottom-auto p-4  bg-white/20 backdrop-blur-sm   transition-all translate-x-full outline-none
 }
 .react_modal__content--after-open {
     @apply -translate-x-0

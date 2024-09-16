@@ -1,11 +1,11 @@
 import {useState} from "react";
 import Modal from "react-modal";
 import css from "./ModalMenu.module.css";
-import {IoPerson, IoReorderThree} from "react-icons/io5";
+import {IoReorderThree} from "react-icons/io5";
 import UserMenu from "./UserMenu";
 import AuthNav from "./AuthNav";
 import {useSelector} from "react-redux";
-import {selectAuthIsLoggedIn, selectAuthUser} from "../redux/auth/selectors";
+import {selectAuthIsLoggedIn} from "../redux/auth/selectors";
 
 Modal.setAppElement("#root");
 
@@ -21,7 +21,7 @@ const cssContent = {
 };
 const ModalMenu = () => {
     const isLoggedIn = useSelector(selectAuthIsLoggedIn);
-    const user = useSelector(selectAuthUser);
+
     const [modalIsOpen, setIsOpen] = useState(false);
 
     function openModal() {
@@ -40,12 +40,6 @@ const ModalMenu = () => {
             <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} bodyOpenClassName={css["ReactModal__Body--open"]} overlayClassName={cssOverlay} className={cssContent} contentLabel="MobileMenu Modal">
                 <div className={css["mobile-menu"]} onClick={closeModal}>
                     {isLoggedIn ? <UserMenu /> : <AuthNav />}{" "}
-                    <div className={css.user} title="Profile">
-                        <div className={css.avatar}>
-                            <IoPerson />
-                        </div>
-                        Hello: {user.name ?? "Guest"}
-                    </div>
                 </div>
             </Modal>
         </>
